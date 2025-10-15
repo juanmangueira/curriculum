@@ -1,0 +1,118 @@
+site_name: Curriculum | Juan Mangueira
+site_description: Currículo profissional de Juan Mangueira, Engenheiro de Dados especializado em pipelines de dados, cloud computing (GCP/AWS) e ferramentas modernas de Data Engineering
+site_author: Juan Mangueira
+site_url: https://juanmangueira.xyz
+
+theme:
+  name: material
+  palette:
+    # Modo claro
+    - scheme: default
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Alternar para modo escuro
+    # Modo escuro
+    - scheme: slate
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Alternar para modo claro
+  
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+  features:
+    - navigation.instant      # Navegação rápida
+    - navigation.tracking     # Tracking de URL
+    - navigation.tabs         # Abas no topo
+    - navigation.sections     # Seções colapsáveis
+    - navigation.top          # Botão voltar ao topo
+    - search.suggest          # Sugestões de busca
+    - search.highlight        # Highlight de busca
+    - content.code.copy       # Copiar código
+    - content.tabs.link       # Tabs linkadas
+  
+  icon:
+    repo: fontawesome/brands/github
+
+# Repositório (ajuste com seu repo real)
+repo_url: https://github.com/juanmangueira/curriculum
+repo_name: juanmangueira/curriculum
+
+# Plugins essenciais
+plugins:
+  - search:
+      lang: pt
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: date
+      fallback_to_build_date: true
+
+# Extensões Markdown
+markdown_extensions:
+  # Formatação básica
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  
+  # Emojis e ícones
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  
+  # Code highlighting
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  
+  # Listas e tabelas
+  - def_list
+  - tables
+  
+  # Tabs
+  - pymdownx.tabbed:
+      alternate_style: true
+  
+  # Notas de rodapé
+  - footnotes
+
+# Links extras (redes sociais)
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/juanmangueira
+      name: LinkedIn - Juan Mangueira
+    - icon: fontawesome/brands/github
+      link: https://github.com/juanmangueira
+      name: GitHub - Juan Mangueira
+    - icon: fontawesome/solid/envelope
+      link: mailto:juanmangueira@outlook.com
+      name: Email - juanmangueira@outlook.com
+  
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX  # Adicione seu ID do Google Analytics depois
+
+# Navegação
+nav:
+  - Início: index.md
+  - Experiência: experience.md
+  - Educação: education.md
+  - Habilidades: habilities.md
+  - Contato: contact.md
+
+# Copyright
+copyright: Copyright &copy; 2025 Juan Mangueira - Engenheiro de Dados
